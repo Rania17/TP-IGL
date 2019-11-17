@@ -1,0 +1,158 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+
+
+
+.bg-image {
+  /* The image used */
+  background-image: url("e.jpg");
+  height: 100vh;
+  background-size: contain;
+  background-position: top ;
+  background-repeat: no-repeat;
+  display: flex;
+  position: relative;
+  right: 1px;
+
+}
+
+.footer {
+	background : #ffffff;
+	color: #d3d3d3;
+	height: 300px;
+	position: relative;
+	bottom: 175px;
+}
+
+.footer .footer-content{
+	
+	height: 300px;
+	display: flex;
+}
+
+.footer .footer-content .footer-section{
+	flex: 1;
+	margin-left: 40px;
+	
+}
+
+
+.footer .footer-content h1,
+.footer .footer-content h2{
+	margin-left: 50px;
+	font-family: Segoe UI ;
+	color: #272727;
+	 
+}
+
+
+.footer .footer-content .about h1 span {
+	color: #2bdae3;
+	font-family: Segoe UI ; 
+}
+
+.footer .footer-content .about .contact span {
+	display: block;
+	font-size: 1.1em;
+	color:  black;
+	margin-bottom: 8px;
+	font-family: Segoe UI ; 
+
+}
+.footer .footer-content .about p {
+	color: black;
+	font-family: Segoe UI ; 
+	margin-right: 100px;
+
+}
+
+.footer .footer-content .about .socials a
+{
+	color: black;
+	width: 45px;
+	height: 41px;
+	padding-top: 5px;
+	margin-right: 5px;
+	text-align: center;
+	display: inline-block;
+	font-size: 1.3em;
+	border-radius: 5px;
+	text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+}
+
+.footer .footer-content .links .first
+{
+	font-family: Segoe UI;
+}
+
+.footer .footer-content .about .socials a:hover 
+{
+	color: #686868;
+	transition: all .3s;
+
+}
+
+
+
+
+.footer .footer-content .contact .second
+{
+		font-family: Segoe UI;
+
+}
+
+
+.footer .footer-content .links ul a {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 1.2em;
+	font-family: Segoe UI ; 
+	color: black;
+	text-decoration: none;
+	transition: all .3s;
+
+}
+
+.footer .footer-content .links ul a:hover 
+{
+	color: #686868;
+	margin-left: 15px;
+	transition: all .3s;
+}
+
+.footer .footer-content .contact-form .contact-input {
+	border: none;
+	background: #ffffff;
+	margin-left: 70px;
+	margin-bottom: 10px;
+	line-height: 1.5rem;
+	padding: .9rem 1.rem;
+	width: 200px;
+	border: 1px solid #ccc;
+
+}
+
+.footer .footer-content .contact-form .contact-input:focus {
+
+background: #120F35;
+color: #ffffff;
+}
+
+.footer .footer-content .contact-form .contact-btn {
+	margin-right: 20px;
+	float : right;
+}
+
+.btn-big{
+	padding: .5rem 1.3rem;
+	line-height: 1.3rem;
+	color: #ffffff;
+	background: #29cece;
+	border: none;
+
+}
