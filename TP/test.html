@@ -2,19 +2,32 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<title>
-		Login and registrations
-	</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ScolarESI</title>
 	<link rel="stylesheet" type="text/css" href="add.css">
 </head>
 <body>
 
 <div class="header" id="myHeader">
-  <h2>My Header</h2>
+	<div class="container">
+	<h1>Scolar<span>ESI</span></h1>			
+		</div>
+
+		<div class="nav">
+			<ul>
+				<a href="#"><li><span>Aide</span></li>
+				<li><button class="boutonco" style="vertical-align:middle"><span>Se connecter</span>
+				</button></li>
+			</ul>
+		</div>
+
+	</div>
 </div>
 
-<div class="bg-image"> </div>
+
+
+<div class="content"> 
+	<div class="bg-image"> </div>
    <div class="footer">
 	<div class="footer-content">
 		<div class="footer-section about">
@@ -57,9 +70,25 @@
 			</form>
 		</div>
 
-
+</div>
 	</div>
     </div>
+
+    <script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
 
 </body>
 </html>
