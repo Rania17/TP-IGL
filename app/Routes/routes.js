@@ -6,4 +6,6 @@ module.exports = function(app) {
     })
     
     app.get('/Students/all', studentController.getAllStudents)
+
+    app.post('/Students/add', studentController.addStudent)
 }

@@ -7,7 +7,7 @@ var Student = (student) => {
 }
 
 Student.creatStudent = (newStudent, result) => {
-    sql.query("INSERT INTO students set ?", newStudent, (err, res) => {
+    sql.query("INSERT INTO students SET ?", newStudent, (err, res) => {
         if (err) {
             console.log("error: ", err)
             result(err, null)

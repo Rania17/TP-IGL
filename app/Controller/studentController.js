@@ -1,3 +1,11 @@
+/*const express = require('express')
+const app = express()
+
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }))
+*/
+
 var Student = require('../Model/studentModel')
 
 exports.getAllStudents = (req, res) => {
@@ -10,4 +18,25 @@ exports.getAllStudents = (req, res) => {
             res.send(student)
         }
     })
+}
+
+exports.addStudent = (req, res) => {
+    console.log('addStudent controller !')
+
+
+    var newStudent = req.body
+    console.log(newStudent)
+
+    if (!newStudent.nom || !newStudent.prenom || !newStudent.annee) {
+        res.status(400).send({ error:true, message: 'Please provide nom/prenom/annee' });
+    }
+    else {
+        Student.creatStudent(newStudent, (err, student) => {
+            if (err) {
+                res.send(err)
+            } else {
+                res.json(newStudent)
+            }
+        })
+    }
 }
