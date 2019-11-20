@@ -90,7 +90,7 @@ a {
 }
 
 .nav li span {
-	
+
 }
 
 .nav {
@@ -102,6 +102,8 @@ a {
   height: 100vh;
   background-image: url('e.jpg');
   background-size: contain;
+    background-repeat: no-repeat;
+
   /*
   background-position: top ;
   background-repeat: no-repeat;
