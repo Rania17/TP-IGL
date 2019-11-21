@@ -15,7 +15,7 @@ exports.getAllTeachers = (req, res) => {
 exports.addTeacher = (req, res) => {
     console.log('addTeacher controller !')
 
-    var newTeacher = req.body
+    var newTeacher = req.body.teacher
     console.log(newTeacher)
 
     if (!newTeacher.nom || !newTeacher.prenom) {
