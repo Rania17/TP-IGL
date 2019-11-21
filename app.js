@@ -2,16 +2,19 @@ const express = require('express')
 const app = express()
 const mysql = require('mysql')
 const bodyParser = require('body-parser')
-const PORT = process.env.PORT || 3000
+const cors = require('cors')
+const PORT = process.env.PORT || 8000
+
 
 app.use(bodyParser.json())
+app.use(cors())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '))))',
-    database: 'igl'
+    host: 'remotemysql.com',
+    user: 'nxv9tGXW5W',
+    password: 'LqadDAMfQL',
+    database: 'nxv9tGXW5W'
 })
 
 connection.connect()

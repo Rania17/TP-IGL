@@ -16,7 +16,7 @@ exports.addStudent = (req, res) => {
     console.log('addStudent controller !')
 
 
-    var newStudent = req.body
+    var newStudent = req.body.student
     console.log(newStudent)
 
     if (!newStudent.nom || !newStudent.prenom || !newStudent.annee) {
