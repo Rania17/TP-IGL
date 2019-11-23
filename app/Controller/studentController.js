@@ -1,8 +1,56 @@
 var Student = require('../Model/studentModel')
 
-exports.getAllStudents = (req, res) => {
-    console.log('getAllStudents controller !')
-    Student.getAllStudents((err, student) => {
+exports.getCpOneStudents = (req, res) => {
+    console.log('get 1cp Students controller !')
+    Student.getCpOneStudents((err, student) => {
+        console.log(student)
+        if (err) {
+            res.send(err)
+        } else {
+            res.send(student)
+        }
+    })
+}
+
+exports.getCpTwoStudents = (req, res) => {
+    console.log('get 2cp Students controller !')
+    Student.getCpTwoStudents((err, student) => {
+        console.log(student)
+        if (err) {
+            res.send(err)
+        } else {
+            res.send(student)
+        }
+    })
+}
+
+exports.getCsOneStudents = (req, res) => {
+    console.log('get 1cs Students controller !')
+    Student.getCsOneStudents((err, student) => {
+        console.log(student)
+        if (err) {
+            res.send(err)
+        } else {
+            res.send(student)
+        }
+    })
+}
+
+exports.getCsTwoStudents = (req, res) => {
+    console.log('get 2cs Students controller !')
+    Student.getCsTwoStudents((err, student) => {
+        console.log(student)
+        if (err) {
+            res.send(err)
+        } else {
+            res.send(student)
+        }
+    })
+}
+
+exports.getCsThreeStudents = (req, res) => {
+    console.log('get 3cs Students controller !')
+    Student.getCsThreeStudents((err, student) => {
         console.log(student)
         if (err) {
             res.send(err)
