@@ -4,13 +4,11 @@ import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import './App.css';
 import login from './login';
 import home from './home';
-import Todos from './Todos' ;
 class App extends React.Component {
   render() {
   return (
     <Router>
    <div className="App">     
-   <Todos />
 
    <Switch>
    <Route path="/login" component={login}/> 

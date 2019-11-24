@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Todos from './Todos' ;
 
 function home()
 {
@@ -9,9 +10,12 @@ function home()
 
 
 <div class="header" id="myHeader">
+     
     	<div class="container">
           <h1>Scolar<span>ESI</span></h1>			
         </div>
+		<Todos />
+
 	</div>
 
 
