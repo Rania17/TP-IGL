@@ -84,7 +84,7 @@ Student.getCsThreeStudents = (result) => {
 }
 
 Student.update = (id, student, result) => {
-    sql.query("UPDATE students SET student = ? WHERE id = ?", [student.id, id], function (err, res) {
+    sql.query("UPDATE students SET nom = ?, prenom = ?, annee = ? WHERE id = ?", [student.nom, student.prenom, student.annee, id], function (err, res) {
         if (err) {
             console.log("error: ", err)
             result(null, err)

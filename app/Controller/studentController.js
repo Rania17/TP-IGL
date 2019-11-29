@@ -63,7 +63,6 @@ exports.getCsThreeStudents = (req, res) => {
 exports.addStudent = (req, res) => {
     console.log('addStudent controller !')
 
-
     var newStudent = req.body.student
     console.log(newStudent)
 
@@ -79,4 +78,32 @@ exports.addStudent = (req, res) => {
             }
         })
     }
+}
+
+exports.updateStudent = (req, res) => {
+    console.log('updateStudent controller !')
+    var updatedStudent = req.body
+    console.log(req.params.id)
+    console.log(updatedStudent)
+    Student.update(req.params.id, updatedStudent, (err, student) => {
+        if (err) {
+            res.send(err)
+        } else {
+            res.json(updatedStudent)
+        }
+    })
+}
+
+exports.deleteStudent = (req, res) => {
+    console.log('deleteStudent controller !')
+    var student = req.body
+    console.log(req.params.id)
+    console.log(student)
+    Student.remove(req.params.id, (err, student) => {
+        if (err) {
+            res.send(err)
+        } else {
+            res.json({"message": "Student deleted !"})
+        }
+    })
 }

@@ -12,6 +12,8 @@ module.exports = function(app) {
     app.get('/Students/all/2cs', studentController.getCsTwoStudents)
     app.get('/Students/all/3cs', studentController.getCsThreeStudents)
     app.post('/Students/add', studentController.addStudent)
+    app.put('/Students/update/:id', studentController.updateStudent)
+    app.delete('/Students/delete/:id', studentController.deleteStudent)
     //Teachers routes
     app.post('/Teachers/add', teacherContoller.addTeacher)
     app.get('/Teachers/all', teacherContoller.getAllTeachers)
