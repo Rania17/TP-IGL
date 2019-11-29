@@ -83,4 +83,28 @@ Student.getCsThreeStudents = (result) => {
     })
 }
 
+Student.update = (id, student, result) => {
+    sql.query("UPDATE students SET student = ? WHERE id = ?", [student.id, id], function (err, res) {
+        if (err) {
+            console.log("error: ", err)
+            result(null, err)
+        }
+        else {
+            result(null, res)
+        }
+    })
+}
+
+Student.remove = function (id, result) {
+    sql.query("DELETE FROM students WHERE id = ?", [id], function (err, res) {
+        if (err) {
+            console.log("error: ", err)
+            result(null, err)
+        }
+        else {
+            result(null, res)
+        }
+    })
+}
+
 module.exports = Student
