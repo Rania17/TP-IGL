@@ -25,7 +25,6 @@ Student.getCpOneStudents = (result) => {
             console.log('error: ', err)
             result(null, err)
         } else {
-            console.log('Students: ', res)
             result(null, res)
         }
     })
@@ -38,7 +37,6 @@ Student.getCpTwoStudents = (result) => {
             console.log('error: ', err)
             result(null, err)
         } else {
-            console.log('Students: ', res)
             result(null, res)
         }
     })
@@ -51,7 +49,6 @@ Student.getCsOneStudents = (result) => {
             console.log('error: ', err)
             result(null, err)
         } else {
-            console.log('Students: ', res)
             result(null, res)
         }
     })
@@ -64,7 +61,6 @@ Student.getCsTwoStudents = (result) => {
             console.log('error: ', err)
             result(null, err)
         } else {
-            console.log('Students: ', res)
             result(null, res)
         }
     })
@@ -77,7 +73,6 @@ Student.getCsThreeStudents = (result) => {
             console.log('error: ', err)
             result(null, err)
         } else {
-            console.log('Students: ', res)
             result(null, res)
         }
     })

@@ -3,7 +3,6 @@ var Student = require('../Model/studentModel')
 exports.getCpOneStudents = (req, res) => {
     console.log('get 1cp Students controller !')
     Student.getCpOneStudents((err, student) => {
-        console.log(student)
         if (err) {
             res.send(err)
         } else {
@@ -15,7 +14,7 @@ exports.getCpOneStudents = (req, res) => {
 exports.getCpTwoStudents = (req, res) => {
     console.log('get 2cp Students controller !')
     Student.getCpTwoStudents((err, student) => {
-        console.log(student)
+
         if (err) {
             res.send(err)
         } else {
@@ -27,7 +26,6 @@ exports.getCpTwoStudents = (req, res) => {
 exports.getCsOneStudents = (req, res) => {
     console.log('get 1cs Students controller !')
     Student.getCsOneStudents((err, student) => {
-        console.log(student)
         if (err) {
             res.send(err)
         } else {
@@ -39,7 +37,6 @@ exports.getCsOneStudents = (req, res) => {
 exports.getCsTwoStudents = (req, res) => {
     console.log('get 2cs Students controller !')
     Student.getCsTwoStudents((err, student) => {
-        console.log(student)
         if (err) {
             res.send(err)
         } else {
@@ -51,7 +48,6 @@ exports.getCsTwoStudents = (req, res) => {
 exports.getCsThreeStudents = (req, res) => {
     console.log('get 3cs Students controller !')
     Student.getCsThreeStudents((err, student) => {
-        console.log(student)
         if (err) {
             res.send(err)
         } else {
@@ -82,13 +78,15 @@ exports.addStudent = (req, res) => {
 
 exports.updateStudent = (req, res) => {
     console.log('updateStudent controller !')
-    var updatedStudent = req.body
-    console.log(req.params.id)
-    console.log(updatedStudent)
+    console.log("Body : " + req.body)
+    console.log("Body.student : " + req.body.student.nom)
+    var updatedStudent = req.body.student
+    console.log("Before model ! " + updatedStudent)
     Student.update(req.params.id, updatedStudent, (err, student) => {
         if (err) {
             res.send(err)
         } else {
+            console.log("Final result " + updatedStudent)
             res.json(updatedStudent)
         }
     })
