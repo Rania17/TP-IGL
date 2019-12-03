@@ -31,3 +31,28 @@ exports.addTeacher = (req, res) => {
         })
     }
 }
+
+exports.updateTeacher = (req, res) => {
+    console.log('updateTeacher controller !')
+    var updatedTeacher = req.body.teacher
+    Teacher.update(req.params.id, updatedTeacher, (err, teacher) => {
+        if (err) {
+            res.send(err)
+        } else {
+            console.log("Final result " + updatedTeacher)
+            res.json(updatedTeacher)
+        }
+    })
+}
+
+exports.deleteTeacher = (req, res) => {
+    console.log('deleteTeacher controller !')
+    var teacher = req.body
+    Teacher.remove(req.params.id, (err, teacher) => {
+        if (err) {
+            res.send(err)
+        } else {
+            res.json({"message": "Teacher deleted !"})
+        }
+    })
+}

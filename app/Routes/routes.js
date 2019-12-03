@@ -17,4 +17,6 @@ module.exports = function(app) {
     //Teachers routes
     app.post('/Teachers/add', teacherContoller.addTeacher)
     app.get('/Teachers/all', teacherContoller.getAllTeachers)
+    app.put('/Teachers/update/:id', teacherContoller.updateTeacher)
+    app.delete('/Teachers/delete/:id', teacherContoller.deleteTeacher)
 }

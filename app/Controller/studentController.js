@@ -78,8 +78,7 @@ exports.addStudent = (req, res) => {
 
 exports.updateStudent = (req, res) => {
     console.log('updateStudent controller !')
-    console.log("Body : " + req.body)
-    console.log("Body.student : " + req.body.student.nom)
+    console.log("Body.student.annee : " + req.body.student.annee)
     var updatedStudent = req.body.student
     console.log("Before model ! " + updatedStudent)
     Student.update(req.params.id, updatedStudent, (err, student) => {
