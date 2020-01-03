@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom"; //routeur ne peut avoir qu’un seul élément ou composant enfant.
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

@@ -1,30 +1,40 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"; //routeur ne peut avoir qu’un seul élément ou composant enfant.
-import './App.css';
-import login from './login';
+import React, { Component } from 'react'
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink
+} from 'reactstrap'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import  student from './Components/Student.js';
+import  teacher from './Components/Teacher.js';
 import home from './home';
-class App extends React.Component {
+
+export class App extends Component {
   render() {
-  return (
-    <Router>
-   <div className="App">     
+    return (
+        <Router> 
+          <div className="App">
+          <Switch>
+          <Route path="/teachers" component={teacher} />
+          <Route path="/students" component={student} />          
+          <Route path ="/" component={home} />
 
-   <Switch>
-   <Route path="/login" component={login}/> 
-   <Route path ="/" component={home} /></Switch> 
-    </div>
-    </Router>
-  );
+          </Switch>
+          </div>
+        </Router>
+     
+
+    )
+  }
 }
-}
 
-
-
-
-
-
-
-
-
-export default App;
+export default App

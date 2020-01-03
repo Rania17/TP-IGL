@@ -15,7 +15,6 @@ function home()
           <h1>Scolar<span>ESI</span></h1>			
         </div>
 		<Todos />
-
 	</div>
 
 
