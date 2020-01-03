@@ -1,16 +1,4 @@
-/** 
- * 
- * Controleur de la classe étudiant
- * 
- */
-
 var Student = require('../Model/studentModel')
-
-/** 
- * 
- * Controlleur de la procédure récupérer étudiants 1cp
- * 
- */
 
 exports.getCpOneStudents = (req, res) => {
     console.log('get 1cp Students controller !')
@@ -22,13 +10,6 @@ exports.getCpOneStudents = (req, res) => {
         }
     })
 }
-
-/** 
- * 
- * Controlleur de la procédure récupérer étudiants 2cp
- * 
- */
-
 
 exports.getCpTwoStudents = (req, res) => {
     console.log('get 2cp Students controller !')
@@ -42,13 +23,6 @@ exports.getCpTwoStudents = (req, res) => {
     })
 }
 
-
-/** 
- * 
- * Controlleur de la procédure récupérer étudiants 1cs
- * 
- */
-
 exports.getCsOneStudents = (req, res) => {
     console.log('get 1cs Students controller !')
     Student.getCsOneStudents((err, student) => {
@@ -59,13 +33,6 @@ exports.getCsOneStudents = (req, res) => {
         }
     })
 }
-
-/** 
- * 
- * Controlleur de la procédure récupérer étudiants 2cs
- * 
- */
-
 
 exports.getCsTwoStudents = (req, res) => {
     console.log('get 2cs Students controller !')
@@ -78,13 +45,6 @@ exports.getCsTwoStudents = (req, res) => {
     })
 }
 
-/** 
- * 
- * Controlleur de la procédure récupérer étudiants 3cs
- * 
- */
-
-
 exports.getCsThreeStudents = (req, res) => {
     console.log('get 3cs Students controller !')
     Student.getCsThreeStudents((err, student) => {
@@ -95,13 +55,6 @@ exports.getCsThreeStudents = (req, res) => {
         }
     })
 }
-
-/** 
- * 
- * Controlleur de la procédure ajouter étudiant
- * 
- */
-
 
 exports.addStudent = (req, res) => {
     console.log('addStudent controller !')
@@ -123,12 +76,6 @@ exports.addStudent = (req, res) => {
     }
 }
 
-/** 
- * 
- * Controlleur de la procédure mise à jour des étudiants
- * 
- */
-
 exports.updateStudent = (req, res) => {
     console.log('updateStudent controller !')
     console.log("Body.student.annee : " + req.body.student.annee)
@@ -143,12 +90,6 @@ exports.updateStudent = (req, res) => {
         }
     })
 }
-
-/** 
- * 
- * Controlleur de la procédure suppression étudiant
- * 
- */
 
 exports.deleteStudent = (req, res) => {
     console.log('deleteStudent controller !')

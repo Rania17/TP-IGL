@@ -1,37 +1,9 @@
-
-/** 
- * 
- * Classe enseignant
- * 
- */
 var sql = require('./db.js')
 
-/** 
- * 
- * Constructeur de la classe enseignant
- * 
- */
-
 var Teacher = (teacher) => {
-/** 
- * Nom enseignant
- * @type {string}
- * 
- */
     this.nom = teacher.nom
-/** 
- * Prénom enseignant
- * @type {string}
- * 
- */
     this.prenom = teacher.prenom
 }
-
-/** 
- * 
- * Procédure : créer enseignant
- * 
- */
 
 Teacher.creatTeacher = (newTeacher, result) => {
     sql.query("INSERT INTO teachers SET ?", newTeacher, (err, res) => {
@@ -44,13 +16,6 @@ Teacher.creatTeacher = (newTeacher, result) => {
         }
     })
 }
-
-
-/** 
- * 
- * Procédure : Récupérer enseignants
- * 
- */
 
 Teacher.getAllTeachers = (result) => {
     sql.query("SELECT * FROM teachers", (err, res) => {
@@ -65,13 +30,6 @@ Teacher.getAllTeachers = (result) => {
     })
 }
 
-
-/** 
- * 
- * Procédure : Mise à jour des enseignants
- * 
- */
-
 Teacher.update = (id, teacher, result) => {
     sql.query("UPDATE teachers SET nom = ?, prenom = ? WHERE id = ?", [teacher.nom, teacher.prenom, id], function (err, res) {
         if (err) {
@@ -83,12 +41,6 @@ Teacher.update = (id, teacher, result) => {
         }
     })
 }
-
-/** 
- * 
- * Procédure : suppression enseignant
- * 
- */
 
 Teacher.remove = function (id, result) {
     sql.query("DELETE FROM teachers WHERE id = ?", [id], function (err, res) {

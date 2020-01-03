@@ -1,18 +1,4 @@
-
-/** 
- * 
- * Controleur de la classe enseignant
- * 
- */
-
 var Teacher = require('../Model/teacherModel')
-
-
-/** 
- * 
- * Controlleur de la procédure récupérer enseignants
- * 
- */
 
 exports.getAllTeachers = (req, res) => {
     console.log('getAllTeachers controller !')
@@ -25,12 +11,6 @@ exports.getAllTeachers = (req, res) => {
         }
     })
 }
-
-/** 
- * 
- * Controlleur de la procédure ajouter enseignant
- * 
- */
 
 exports.addTeacher = (req, res) => {
     console.log('addTeacher controller !')
@@ -52,12 +32,6 @@ exports.addTeacher = (req, res) => {
     }
 }
 
-/** 
- * 
- * Controlleur de la procédure mise à jour enseignants
- * 
- */
-
 exports.updateTeacher = (req, res) => {
     console.log('updateTeacher controller !')
     var updatedTeacher = req.body.teacher
@@ -71,12 +45,6 @@ exports.updateTeacher = (req, res) => {
     })
 }
 
-/** 
- * 
- * Controlleur de la procédure suppression enseignant
- * 
- */
-
 
 exports.deleteTeacher = (req, res) => {
     console.log('deleteTeacher controller !')
@@ -89,6 +57,7 @@ exports.deleteTeacher = (req, res) => {
         }
     })
 }
+
 
 /*function addTeacher2(teacher) {
     if (!teacher.nom || !teacher.prenom || !teacher.annee) {
@@ -104,4 +73,4 @@ exports.deleteTeacher = (req, res) => {
     }
 }
 
-module.exports = {addTeacher2}; */
+module.exports = {addTeacher2};*/
