@@ -1,12 +1,16 @@
 {
-  "name": "my-appp",
+  "name": "igl-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0"
+    "react-scripts": "^3.3.0",
+    "reactstrap": "^8.1.1",
+    "selenium-webdriver": "^4.0.0-alpha.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -28,5 +32,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }
